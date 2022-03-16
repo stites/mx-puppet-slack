@@ -377,6 +377,7 @@ export class App {
 				body: res.body,
 				formattedBody: res.formatted_body,
 				emote: msg.meMessage,
+				thread: !!msg.threadTs,
 			};
 			if (msg.threadTs) {
 				const replyTs = this.threadSendTs[msg.threadTs] || msg.threadTs;
